@@ -21,10 +21,6 @@
 	<source src="video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 </video>
 		
-<!-- 
-  Example created by Lee Stemkoski: https://github.com/stemkoski
-  Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
--->
 
 <script>
 
@@ -64,9 +60,6 @@ function initialize()
 	deltaTime = 0;
 	totalTime = 0;
 	
-	////////////////////////////////////////////////////////////
-	// setup arToolkitSource
-	////////////////////////////////////////////////////////////
 
 	arToolkitSource = new THREEx.ArToolkitSource({
 		sourceType : 'webcam',
@@ -90,10 +83,7 @@ function initialize()
 	window.addEventListener('resize', function(){
 		onResize()
 	});
-	
-	////////////////////////////////////////////////////////////
-	// setup arToolkitContext
-	////////////////////////////////////////////////////////////	
+
 
 	// create atToolkitContext
 	arToolkitContext = new THREEx.ArToolkitContext({
@@ -106,9 +96,6 @@ function initialize()
 		camera.projectionMatrix.copy( arToolkitContext.getProjectionMatrix() );
 	});
 
-	////////////////////////////////////////////////////////////
-	// setup markerRoots
-	////////////////////////////////////////////////////////////
 
 	// build markerControls
 	markerRoot1 = new THREE.Group();
